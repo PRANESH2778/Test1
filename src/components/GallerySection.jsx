@@ -37,9 +37,9 @@ const GallerySection = () => {
       <div className="gallery-item-container">
         <div className="gallery-item">
           <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
-          <div className="overlay">
+          {/* <div className="overlay">
             <span>View Details</span>
-          </div>
+          </div> */}
         </div>
         <button className="prev" onClick={prevSlide}>
           &lt;

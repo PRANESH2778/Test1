@@ -1,68 +1,67 @@
 .footer {
-    background-color: #2b6777;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .footer p {
-    color: #fff;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  
-  .section {
-    flex: 1 1 250px;
-    margin: 10px;
-  }
-  
-  .title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #f9f9f9;
-  }
-  
-  .links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .link {
-    color: #f9f9f9;
-    text-decoration: none;
-    margin: 5px 0;
-    display: block;
-    transition: color 0.3s;
-  }
-  
-  .link:hover {
-    color: #ffcc00;
-  }
-  
-  .socialMedia {
-    margin: 20px 0;
-  }
-  
-  .icon {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .icon:hover {
-    color: #ffcc00;
-  }
-  
-  .copyRight {
-    font-size: 0.9em;
-    margin-top: 10px;
-    color: #cfcfcf;
-  }
-  
+  background-color: #eef2f6; /* Light neutral blue matching the section's background */
+  color: #2c3e50; /* Dark muted blue for text */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer p {
+  color: #7f8c8d; /* Soft grey text for paragraphs */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #2c3e50; /* Dark muted blue for titles */
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  color: #34495e; /* Soft dark blue for links */
+  text-decoration: none;
+  margin: 5px 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #2980b9; /* Bright blue for hover effect */
+}
+
+.socialMedia {
+  margin: 20px 0;
+}
+
+.icon {
+  margin: 0 10px;
+  color: #34495e; /* Soft dark blue for social icons */
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #2980b9; /* Bright blue for hover */
+}
+
+.copyRight {
+  font-size: 0.9em;
+  margin-top: 10px;
+  color: #95a5a6; /* Soft grey for copyright */
+}

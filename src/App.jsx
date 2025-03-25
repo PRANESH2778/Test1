@@ -20,10 +20,13 @@ import GSTIndirectTaxes from './components/GSTIndirectTaxes';
 import InternationalTaxationFEMA from './components/InternationalTaxationFEMA';
 import StartupSMEServices from './components/StartupSMEServices';
 import Layout from './components/Layout';
+import Solutions from './pages/Solutions';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar />
       <div style={styles.container}>
         <Routes>
@@ -33,6 +36,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
           <Route path="/approach" element={<Approach />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/DirectTaxation" element={<DirectTaxation />} />
           <Route path="/AccountingBookkeeping" element={<AccountingBookkeeping />} />
           <Route path="/AuditAssurance" element={<AuditAssurance />} />

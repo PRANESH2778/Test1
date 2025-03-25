@@ -1,8 +1,11 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Logo styling */
 .logo {
   display: flex;
   align-items: center;
@@ -13,6 +16,7 @@
   width: auto;  /* Maintain aspect ratio */
 }
 
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -23,6 +27,7 @@
   z-index: 10;
 }
 
+/* Navigation links */
 .navlink {
   display: flex;
   justify-content: flex-end;
@@ -50,7 +55,57 @@
   color: #facc15; /* Yellow on hover */
 }
 
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  text-decoration: none;
+  color: #f1f5f9;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropdown:hover {
+  color: #facc15;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust to place dropdown under "About" */
+  left: 0;
+  background-color: #1e3a8a;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdownMenu.show {
+  display: block;
+}
+
+.dropdownLink {
+  display: block;
+  color: #f1f5f9;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdownLink:hover {
+  color: #facc15;
+  background-color: #3b82f6;
+}
+
+/* Mobile-specific styling */
 .mobMenuIcon {
+  display: none;
+}
+
+.navmobilelink {
   display: none;
 }
 
@@ -61,9 +116,11 @@
     top: 15px;
     left: 35px;
   }
+
   .navlink {
     display: none;
   }
+
   .navmobilelink {
     position: absolute;
     display: block;
@@ -74,6 +131,7 @@
     transition: all 0.5s ease-out;
     width: 100%;
   }
+
   .Home,
   .About,
   .Approach,
@@ -84,21 +142,33 @@
     width: 100%;
     transition: all 0.5s ease-out;
   }
+
   .Home:hover,
   .About:hover,
   .Approach:hover,
   .Contact:hover {
     color: #facc15; /* Yellow on hover for mobile links */
   }
+
   .mobMenuIcon {
     display: block;
     position: absolute;
     font-size: 30px;
     color: white; /* White icon color */
-     /* Matching background color */
-     background: linear-gradient(90deg, #3b82f6, #3b82f6);
+    background: linear-gradient(90deg, #3b82f6, #3b82f6); /* Matching background color */
     border: none;
     top: 15px;
     right: 25px;
+  }
+
+  /* Dropdown styles for mobile */
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdownLink {
+    padding: 15px 20px;
   }
 }

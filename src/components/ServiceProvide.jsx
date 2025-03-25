@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate for navigation
 import {
   FaBalanceScale,
   FaMoneyCheckAlt,
@@ -13,6 +13,8 @@ import {
 import "./ServiceProvide.css";
 
 const ServiceProvide = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
       title: "Direct Taxation",
@@ -77,6 +79,15 @@ const ServiceProvide = () => {
             </Link>
           </div>
         ))}
+      </div>
+      {/* Add "Know More" button below the section */}
+      <div className="know-more-container">
+        <button
+          className="know-more-button"
+          onClick={() => navigate("/services")}
+        >
+          Know More
+        </button>
       </div>
     </div>
   );
