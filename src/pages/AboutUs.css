@@ -1,0 +1,139 @@
+/* General Styles */
+.aboutcontainer {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Section Styling */
+  .missionSection, .chooseUsSection, .meetPartnersSection {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chooseUsSection h2, .missionSection h2, .meetPartnersSection h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Bullet List Styling */
+  .bulletList {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .bulletList li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Partners Section */
+  .partners-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .partner-card {
+    background: #fff;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .partner-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .partner-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Team Image Styling */
+  .teamImage {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  
+    .partner-card {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  
+    .partner-card {
+      width: 100%;
+    }
+  }

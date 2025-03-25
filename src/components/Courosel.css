@@ -1,0 +1,194 @@
+/* Default styles for larger screens (desktop) */
+.courosel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px; /* Height for larger screens */
+    width: 80%; /* Set width to 80% of the screen width for flexibility */
+    max-width: 1200px; /* Set a max-width to avoid the slider stretching too much */
+    margin: auto; /* Center the carousel horizontally */
+}
+
+.slide {
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 7px #666;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Needed to position text over the image */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 0.5rem;
+}
+
+.slide-hidden {
+    display: none;
+}
+
+/* Text style */
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white;
+    font-size: 2rem; /* Adjust the font size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Makes text more readable */
+    z-index: 10; /* Ensures text is on top of the image */
+    text-align: center; /* Ensures the text is aligned properly */
+}
+
+/* Arrow styles */
+.arrow {
+    position: absolute;
+    width: 2.5rem; /* Larger arrow size for desktops */
+    height: 2.5rem;
+    color: white;
+    filter: drop-shadow(0px 0px 5px #555);
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 1.5rem;
+}
+
+.arrow-right {
+    right: 1.5rem;
+}
+
+/* Indicators styles */
+.indicators {
+    display: flex;
+    position: absolute;
+    bottom: 1.5rem;
+    font-size: 0.3rem;
+}
+
+.indicator {
+    background-color: white;
+    border-radius: 100%;
+    font-size: 0.3rem;
+
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px #555;
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
+button{
+    font-size: 0.4rem;
+
+}
+.indicator-inactive {
+    background-color: gray;
+}
+
+/* Responsive styles for tablets and below */
+@media (max-width: 1024px) {
+    .courosel {
+        height: 500px; /* Slightly smaller height for tablets */
+        width: 90%; /* Increase the width a bit for better use of space */
+    }
+
+    .arrow {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .indicators {
+        bottom: 1rem;
+    }
+
+    .indicator {
+        height: 0.6rem;
+        width: 0.6rem;
+    }
+
+    .slide-text {
+        font-size: 1.5rem; /* Adjust text size for tablet */
+    }
+}
+
+/* Mobile-first styles */
+@media (max-width: 768px) {
+    .courosel {
+        height: 400px;
+        width: 100%;
+    }
+
+    .arrow {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .indicators {
+        bottom: 0.5rem;
+    }
+
+    .indicator {
+        height: 0.4rem;
+        width: 0.4rem;
+    }
+
+    .slide-text {
+        font-size: 1.2rem; /* Adjust text size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .courosel {
+        height: 350px;
+        width: 100%;
+    }
+
+    .arrow {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .indicators {
+        bottom: 0.4rem;
+    }
+
+    .indicator {
+        height: 0.3rem;
+        width: 0.3rem;
+    }
+
+    .slide-text {
+        font-size: 1rem; /* Adjust text size for smaller mobile */
+    }
+}
+
+@media (max-width: 320px) {
+    .courosel {
+        height: 300px;
+        width: 100%;
+    }
+
+    .arrow {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .indicators {
+        bottom: 0.3rem;
+    }
+
+    .indicator {
+        height: 0.3rem;
+        width: 0.3rem;
+    }
+
+    .slide-text {
+        font-size: 0.8rem; /* Adjust text size for very small screens */
+    }
+}
