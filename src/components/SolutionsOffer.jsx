@@ -28,17 +28,17 @@ const SolutionsOffer = () => {
   ];
 
   return (
-    <div className="solutions-container">
-      <h1 className="solutions-title">SOLUTIONS WE OFFER</h1>
-      <p className="solutions-subtitle">
+    <div className="solutionOffer-container">
+      <h1 className="solutionOffer-title">SOLUTIONS WE OFFER</h1>
+      <p className="solutionOffer-subtitle">
         We offer a number of solutions to meet the needs of our clients such as captive centers, young entrepreneur services, and next-generation family businesses.
       </p>
-      <div className="solutions-grid">
+      <div className="solutionOffer-grid">
         {solutions.map((solution, index) => (
-          <div key={index} className="solution-card">
-            <div className="solution-icon">{solution.icon}</div>
-            <h3 className="solution-title">{solution.title}</h3>
-            <p className="solution-description">{solution.description}</p>
+          <div key={index} className="solutionOffer-card">
+            <div className="solutionOffer-icon">{solution.icon}</div>
+            <h3 className="solutionOffer-title">{solution.title}</h3>
+            <p className="solutionOffer-description">{solution.description}</p>
           </div>
         ))}
       </div>

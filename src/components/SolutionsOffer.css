@@ -1,30 +1,30 @@
-.solutions-container {
+.solutionOffer-container {
   padding: 2rem;
   text-align: center;
   background: rgb(240, 240, 240);
   color: rgb(44, 62, 80);
 }
 
-.solutions-title {
+.solutionOffer-title {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
   color: rgb(44, 62, 80);
 }
 
-.solutions-subtitle {
+.solutionOffer-subtitle {
   font-size: 0.95rem;
   margin-bottom: 2rem;
   color: rgb(112, 147, 184);
 }
 
-.solutions-grid {
+.solutionOffer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.solution-card {
+.solutionOffer-card {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(220, 220, 220);
   border-radius: 10px;
@@ -34,26 +34,26 @@
   color: rgb(44, 62, 80);
 }
 
-.solution-card:hover {
+.solutionOffer-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.solution-icon {
+.solutionOffer-icon {
   display: flex;
   justify-content: center; /* Horizontally center the icon */
   align-items: center; /* Vertically center the icon */
   margin-bottom: 1rem;
 }
 
-.solution-title {
+.solutionOffer-title {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
   color: rgb(44, 62, 80);
 }
 
-.solution-description {
+.solutionOffer-description {
   font-size: 0.95rem;
   line-height: 1.5;
   color: rgb(112, 147, 184);
@@ -81,41 +81,41 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .solutions-container {
+  .solutionOffer-container {
     padding: 1rem;
   }
 
-  .solutions-title {
+  .solutionOffer-title {
     font-size: 1.5rem;
   }
 
-  .solution-card {
+  .solutionOffer-card {
     padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .solutions-container {
+  .solutionOffer-container {
     padding: 0.75rem;
   }
 
-  .solutions-title {
+  .solutionOffer-title {
     font-size: 1.25rem;
   }
 
-  .solutions-subtitle {
+  .solutionOffer-subtitle {
     font-size: 0.85rem;
   }
 
-  .solution-card {
+  .solutionOffer-card {
     padding: 0.75rem;
   }
 
-  .solution-title {
+  .solutionOffer-title {
     font-size: 1rem;
   }
 
-  .solution-description {
+  .solutionOffer-description {
     font-size: 0.85rem;
   }
 }
