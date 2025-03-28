@@ -11,19 +11,19 @@ const SolutionsOffer = () => {
       title: "CAPTIVE CENTER CREATION",
       description:
         "During the last decade, India has emerged as a preferred destination for global companies who want to outsource work to cut costs by way of establishing captive centers...",
-      icon: <FaBuilding size={60} color="#28a745" />, // Icon
+      icon: <FaBuilding size={60} color="#28a745" />, // Green icon
     },
     {
       title: "FIRST GENERATION BUSINESSES ADVISORY",
       description:
         "In the current scenario, to turn one’s idea into a reality and to become a successful entrepreneur involves taking massive risks. So, a well-organized strategy is required...",
-      icon: <FaLightbulb size={60} color="#007bff" />, // Icon
+      icon: <FaLightbulb size={60} color="#ffc107" />, // Yellow icon
     },
     {
       title: "NEXT GENERATION FAMILY BUSINESSES ADVISORY",
       description:
         "In today’s competitive business environment, building a family business as a lasting institution stresses the need to explore opportunities and plan ahead for various challenges...",
-      icon: <FaUsers size={60} color="#6c757d" />, // Icon
+      icon: <FaUsers size={60} color="#007bff" />, // Blue icon
     },
   ];
 
@@ -42,7 +42,6 @@ const SolutionsOffer = () => {
           </div>
         ))}
       </div>
-      {/* Add "Know More" button below the section */}
       <div className="know-more-container">
         <button
           className="know-more-button"
