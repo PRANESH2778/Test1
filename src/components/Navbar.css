@@ -1,7 +1,105 @@
+/* Top Bar Styling (Visible only in Desktop View) */
+.top-bar {
+  background-color: #003366; /* Dark blue background */
+  color: white;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.navbar-nav{
+  color: white;
+}
+.top-bar .contact-info span {
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+}
 
-/* Add padding to the dropdown arrow in mobile view */
+.top-bar .contact-info span svg {
+  margin-right: 5px;
+  color: #FFFFFFAB;
+}
+
+.top-bar .contact-info a {
+  color: #FFFFFFAB;
+  text-decoration: none;
+}
+
+.top-bar .contact-info a:hover {
+  text-decoration: none;
+  color: white;
+}
+.top-bar .social-icons a {
+  color: #FFFFFFAB;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.top-bar .social-icons a:hover {
+  color: white; /* Highlight color on hover */
+}
+
+/* Navbar */
+.navbar {
+  background-color: white !important;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+  margin-left: 1rem;
+  color: #192335;
+}
+
+.navbar-nav .nav-link {
+  color: #192335 !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: lightseagreen !important;
+}
+
+/* Mobile View: Show Contact Info Inside Navbar */
 @media (max-width: 768px) {
-  .dropdown-toggle-mobile {
-    padding-left: 20px !important;
+  /* Hide Top Bar in Mobile */
+  .top-bar {
+    display: none;
+  }
+
+  /* Mobile Contact Info */
+  .mobile-contact {
+    padding: 10px;
+    background-color: #003366;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-contact svg {
+    margin-right: 5px;
+    color: #ffcc00;
+  }
+
+  .mobile-contact a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mobile-contact a:hover {
+    text-decoration: underline;
   }
 }

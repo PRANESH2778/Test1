@@ -25,11 +25,13 @@ const Courosel = ({ data, autoPlay = true, interval = 3000 }) => {
   }, [autoPlay, interval]);
 
   return (
+    
     <div className="courosel">
       <BsArrowLeftCircleFill
         className="arrow arrow-left"
         onClick={prevSlide}
       />
+      
       {data.map((item, index) => (
         <div
           className={slide === index ? "slide" : "slide slide-hidden"}
@@ -37,6 +39,7 @@ const Courosel = ({ data, autoPlay = true, interval = 3000 }) => {
         >
           <img src={item.src} alt={item.alt} />
           <div className="slide-text">{item.text}</div> {/* Text over the image */}
+          <div className="slide-sub-text">{item.subText}</div>
         </div>
       ))}
       <BsArrowRightCircleFill

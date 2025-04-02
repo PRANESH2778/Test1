@@ -29,7 +29,7 @@ const SolutionsOffer = () => {
 
   return (
     <div className="solutionOffer-container">
-      <h1 className="solutionOffer-title">SOLUTIONS WE OFFER</h1>
+      <h1 className="solutionPage-title">SOLUTIONS WE OFFER</h1>
       <p className="solutionOffer-subtitle">
         We offer a number of solutions to meet the needs of our clients such as captive centers, young entrepreneur services, and next-generation family businesses.
       </p>

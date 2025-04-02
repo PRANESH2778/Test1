@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -22,13 +22,18 @@ import StartupSMEServices from './components/StartupSMEServices';
 import Layout from './components/Layout';
 import Solutions from './pages/Solutions';
 import ScrollToTop from './components/ScrollToTop';
+import Blogs from './pages/Blogs';
+import StartupStrategy from './components/StartupStrategy';
+import CaptiveCenterCreation from './components/CaptiveCenterCreation';
+import FirstGenBusinessAdvisory from './components/FirstGenBusinessAdvisory';
+import NextGenFamilyBusiness from './components/NextGenFamilyBusiness';
 
 const App = () => {
   return (
     <Router>
       <ScrollToTop/>
       <Navbar />
-      <div style={styles.container}>
+      <div >
         <Routes>
           <Route path='/' element={<Layout/>}>
           <Route path="/" element={<Home />} />
@@ -36,6 +41,11 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
           <Route path="/approach" element={<Approach />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/startupstrategy" element={<StartupStrategy />} />
+          <Route path="/captivecenter" element={<CaptiveCenterCreation />} />
+          <Route path="/firstgen" element={<FirstGenBusinessAdvisory />} />
+          <Route path="/nextgen" element={<NextGenFamilyBusiness />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/DirectTaxation" element={<DirectTaxation />} />
           <Route path="/AccountingBookkeeping" element={<AccountingBookkeeping />} />
@@ -54,12 +64,12 @@ const App = () => {
   );
 };
 
-const styles = {
-  container: {
-    padding: '20px',
-    margin: '30px auto',
-    maxWidth: '1200px', // This ensures your content is centered and doesn't stretch too much on large screens
-  },
-};
+// const styles = {
+//   container: {
+//     padding: '20px',
+//     margin: '30px auto',
+//     maxWidth: '1200px', // This ensures your content is centered and doesn't stretch too much on large screens
+//   },
+// };
 
 export default App;

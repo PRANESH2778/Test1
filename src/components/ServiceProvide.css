@@ -12,7 +12,7 @@ body {
   
   .services-title {
     font-size: 32px;
-    color: #003366; /* Dark Blue for titles */
+    color: #192335 ;/* Dark Blue for titles */
     margin-bottom: 40px;
   }
   
@@ -49,7 +49,7 @@ body {
   /* Title Styling */
   .service-head-title {
     font-size: 18px;
-    color: #003366; /* Dark blue */
+    color: #444444; /* Dark blue */
     margin-bottom: 10px;
     font-weight: bold;
   }

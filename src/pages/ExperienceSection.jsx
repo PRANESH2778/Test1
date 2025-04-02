@@ -12,22 +12,22 @@ const ExperienceSection = () => {
       </p>
       <div className="stats-container">
         <div className="stat-card">
-          <FaUsers size={50} color="#007acc" />
+          <FaUsers size={50} color="#444444" />
           <div className="stat-number">200+</div>
           <div className="stat-label">Clients</div>
         </div>
         <div className="stat-card">
-          <FaClock size={50} color="#007acc" />
+          <FaClock size={50} color="#444444" />
           <div className="stat-number">2500k+</div>
           <div className="stat-label">Hours of Experience</div>
         </div>
         <div className="stat-card">
-          <FaLaptopCode size={50} color="#007acc" />
+          <FaLaptopCode size={50} color="#444444" />
           <div className="stat-number">50+</div>
           <div className="stat-label">Software Expertise</div>
         </div>
         <div className="stat-card">
-          <FaHandshake size={50} color="#007acc" />
+          <FaHandshake size={50} color="#444444" />
           <div className="stat-number">90%+</div>
           <div className="stat-label">Client Retention</div>
         </div>

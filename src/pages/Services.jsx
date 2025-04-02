@@ -113,13 +113,13 @@ const Services = () => {
       </div>
 
       {/* Image */}
-      <div className="image-container">
+      {/* <div className="image-container">
         <img
           src={financialAdvisoryImage}
           alt="Financial Advisory"
           className="services-image"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

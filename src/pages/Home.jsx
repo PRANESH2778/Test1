@@ -24,27 +24,30 @@ const Home = () => {
     {
       src:"https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZpbmFuY2V8ZW58MHx8MHx8fDA%3D",
       alt:"This is image1",
-      text:"Expert Accounting Services"
+      text:"Welcome to Agrawal Bhaiya & Company",
+      subText:"Your trusted partner in accounting, taxation, and financial advisory."
   },
   {
       src:"https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWNjb3VudGluZ3xlbnwwfHwwfHx8MA%3D%3D",
       alt:"This is image2",
-      text: "Financial Planning & Advisory"
+      text: "Welcome to Agrawal Bhaiya & Company",
+      subText:"Your trusted partner in accounting, taxation, and financial advisory."
 
   },
   {
       src:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFjY291bnRpbmd8ZW58MHx8MHx8fDA%3D",
       alt:"This is image3",
-      text: "Dedicated Team of Professionals"
+      text: "Welcome to Agrawal Bhaiya & Company",
+      subText:"Your trusted partner in accounting, taxation, and financial advisory."
 
   }
   ];
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Welcome to Agrawal Bhaiya & Company</h1>
+      {/* <h1 style={styles.title}>Welcome to Agrawal Bhaiya & Company</h1>
       <p style={styles.subtitle}>
         Your trusted partner in accounting, taxation, and financial advisory.
-      </p>
+      </p> */}
 
       {/* Call-to-Action Section */}
       {/* <div style={styles.callToAction}>
@@ -87,17 +90,25 @@ const Home = () => {
 const styles = {
   container: {
     textAlign: 'center',
-    padding: '20px',
+    padding: '5%',
     background: 'linear-gradient(to bottom, #f7f9fc, #e8eff7)', // Gradient background
     color: '#333',
   },
   title: {
-    fontSize: '2.5em',
-    color: '#2b6777',
+    fontSize: 'clamp(1.8rem, 5vw, 3rem)', // Adjusts size dynamically between 1.8rem and 3rem
+    color: 'white',
+    marginBottom: '10px',
+    position:"relative",
+    top:"10rem",
+    zIndex:'20'
   },
   subtitle: {
-    fontSize: '1.2em',
+    fontSize: 'clamp(1rem, 3vw, 1.5rem)', // Adjusts dynamically for responsiveness
     marginBottom: '20px',
+    color: 'white',
+    position:"relative",
+    top:"10.5rem",
+    zIndex:'20'
   },
   callToAction: {
     margin: '20px 0',

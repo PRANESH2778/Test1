@@ -4,16 +4,16 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer-container">
         {/* Company Info */}
         <div className="section">
-          <h3 className="title">Agrawal Bhaiya & Company</h3>
+          <h3 className="footer-title">Agrawal Bhaiya & Company</h3>
           <p>Your trusted partner in accounting, taxation, and financial advisory.</p>
         </div>
 
         {/* Quick Links */}
         <div className="section">
-          <h3 className="title">Quick Links</h3>
+          <h3 className="footer-title">Quick Links</h3>
           <ul className="links">
             <li><a href="/" className="link">Home</a></li>
             <li><a href="/services" className="link">Services</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="section">
-          <h3 className="title">Contact Us</h3>
+          <h3 className="footer-title">Contact Us</h3>
           <p>📍 Address: 123 Financial Street, Chennai, India</p>
           <p>📞 Phone: +91 98765 43210</p>
           <p>📧 Email: info@agrawalcompany.com</p>

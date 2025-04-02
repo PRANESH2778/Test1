@@ -44,7 +44,7 @@ const TeamDetails = () => {
 
   return (
     <div className="team-container">
-      <h1 className="team-title">Managing Partners</h1>
+      <h1 className="team-main-title">Managing Partners</h1>
       <div className="team-grid">
         {teamMembers.map((member, index) => (
           <div key={index} className="team-card">

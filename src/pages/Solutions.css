@@ -1,14 +1,10 @@
 /* General styles */
-body {
-    margin: 0;
-    font-family: "Arial", sans-serif;
-    line-height: 1.6;
-  }
+
   
   /* Hero Section */
   .solutions-hero {
     text-align: center;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    background:#f8f9fa;
     color: white;
     padding: 50px 20px;
   }
@@ -16,12 +12,14 @@ body {
   .solutions-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #192335;
+    text-transform: uppercase;
   }
   
   .solutions-hero p {
     font-size: 1.2rem;
     margin-top: 0;
-    color: white;
+    color: #444444;
   }
   
   /* Solutions Grid */
@@ -66,14 +64,14 @@ body {
   /* Solution Title */
   .solution-title {
     font-size: 1.5rem;
-    color: #1e3a8a;
+    color: #192335;
     margin: 15px;
   }
   
   /* Solution Description */
   .solution-description {
     font-size: 1rem;
-    color: #6b7280;
+    color: #444444;
     margin: 0 15px 15px;
   }
   

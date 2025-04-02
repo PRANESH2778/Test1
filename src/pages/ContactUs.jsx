@@ -54,7 +54,7 @@ const ContactUs = () => {
 
   return (
     <div style={styles.container}>
-      <h1>Contact Us</h1>
+      <h1>CONTACT US</h1>
       <p>
         If you have any questions or would like to schedule a consultation,
         please contact us.
@@ -65,7 +65,7 @@ const ContactUs = () => {
 
       {/* Contact Form */}
       <section style={styles.formSection}>
-        <h2>Get in Touch</h2>
+        <h2>GET IN TOUCH</h2>
         <form style={styles.form} onSubmit={handleSubmit}>
           <input
             type="text"
@@ -110,7 +110,7 @@ const ContactUs = () => {
 
       {/* Embed Google Maps */}
       <section style={styles.mapSection}>
-        <h2>Our Location</h2>
+        <h2>OUR LOCATION</h2>
         <div style={styles.map}>
           <iframe
             title="Our Office Location"

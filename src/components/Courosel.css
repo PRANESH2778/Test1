@@ -5,55 +5,102 @@
     align-items: center;
     justify-content: center;
     height: 600px; /* Height for larger screens */
-    width: 80%; /* Set width to 80% of the screen width for flexibility */
-    max-width: 1200px; /* Set a max-width to avoid the slider stretching too much */
+    width: 100%; 
+    max-width: 1200px; 
     margin: auto; /* Center the carousel horizontally */
+    overflow: hidden; /* Prevents content from overflowing */
 }
 
+/* Slide container */
 .slide {
     border-radius: 0.5rem;
     box-shadow: 0px 0px 7px #666;
     width: 100%;
     height: 100%;
-    position: relative; /* Needed to position text over the image */
+    position: relative; 
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
 }
 
+/* Add fade-in animation */
+
+
+/* Slide Images */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover; 
     border-radius: 0.5rem;
 }
 
+/* Hide inactive slides */
 .slide-hidden {
     display: none;
 }
 
-/* Text style */
+/* Text Styles */
 .slide-text {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
+    transform: translate(-50%, -50%);
     color: white;
-    font-size: 2rem; /* Adjust the font size */
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Bigger size */
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Makes text more readable */
-    z-index: 10; /* Ensures text is on top of the image */
-    text-align: center; /* Ensures the text is aligned properly */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    text-align: center;
+    white-space: nowrap;
+     /* Smooth text animation */
 }
 
-/* Arrow styles */
+/* Subtitle Styles */
+.slide-sub-text {
+    position: absolute;
+    top: 55%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    text-align: center;
+    
+}
+
+/* Smooth text slide-up animation */
+/* @keyframes slideUp {
+    from { opacity: 0; transform: translate(-50%, 20px); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+} */
+
+/* Dark Gradient Overlay for Better Readability */
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+/* Arrow Styles */
 .arrow {
     position: absolute;
-    width: 2.5rem; /* Larger arrow size for desktops */
-    height: 2.5rem;
+    width: 3rem; /* Bigger arrows */
+    height: 3rem;
     color: white;
     filter: drop-shadow(0px 0px 5px #555);
+    transition: transform 0.3s ease-in-out;
 }
 
 .arrow:hover {
     cursor: pointer;
+    transform: scale(1.1); /* Slight zoom effect */
+    color: #ffcc00;
 }
 
 .arrow-left {
@@ -64,60 +111,59 @@
     right: 1.5rem;
 }
 
-/* Indicators styles */
+/* Indicators (Dots) */
 .indicators {
     display: flex;
     position: absolute;
     bottom: 1.5rem;
-    font-size: 0.3rem;
 }
 
 .indicator {
     background-color: white;
-    border-radius: 100%;
-    font-size: 0.3rem;
-
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
     border: none;
     outline: none;
-    box-shadow: 0px 0px 5px #555;
-    margin: 0 0.3rem;
+    margin: 0 5px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
-button{
-    font-size: 0.4rem;
 
+.indicator:hover {
+    transform: scale(1.2); /* Increase size on hover */
 }
+
 .indicator-inactive {
     background-color: gray;
 }
 
-/* Responsive styles for tablets and below */
+/* Responsive Styles */
+
+/* Tablet */
 @media (max-width: 1024px) {
     .courosel {
-        height: 500px; /* Slightly smaller height for tablets */
-        width: 90%; /* Increase the width a bit for better use of space */
+        height: 500px;
+        width: 90%;
     }
 
     .arrow {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .indicators {
-        bottom: 1rem;
-    }
-
-    .indicator {
-        height: 0.6rem;
-        width: 0.6rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .slide-text {
-        font-size: 1.5rem; /* Adjust text size for tablet */
+        font-size: 2.5rem;
+        white-space: wrap;
+    }
+
+    .slide-sub-text {
+        font-size: 1.5rem;
+        display: none;
     }
 }
 
-/* Mobile-first styles */
+/* Mobile */
 @media (max-width: 768px) {
     .courosel {
         height: 400px;
@@ -125,70 +171,37 @@ button{
     }
 
     .arrow {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .indicators {
-        bottom: 0.5rem;
-    }
-
-    .indicator {
-        height: 0.4rem;
-        width: 0.4rem;
+        width: 2rem;
+        height: 2rem;
     }
 
     .slide-text {
-        font-size: 1.2rem; /* Adjust text size for mobile */
+        font-size: 2rem;
+        white-space: wrap;
+    }
+
+    .slide-sub-text {
+        font-size: 1.2rem;
+        display: none;
     }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
     .courosel {
         height: 350px;
-        width: 100%;
     }
 
     .arrow {
-        width: 1.3rem;
-        height: 1.3rem;
-    }
-
-    .indicators {
-        bottom: 0.4rem;
-    }
-
-    .indicator {
-        height: 0.3rem;
-        width: 0.3rem;
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
     .slide-text {
-        font-size: 1rem; /* Adjust text size for smaller mobile */
-    }
-}
-
-@media (max-width: 320px) {
-    .courosel {
-        height: 300px;
-        width: 100%;
+        font-size: 1.5rem;
     }
 
-    .arrow {
-        width: 1rem;
-        height: 1rem;
-    }
-
-    .indicators {
-        bottom: 0.3rem;
-    }
-
-    .indicator {
-        height: 0.3rem;
-        width: 0.3rem;
-    }
-
-    .slide-text {
-        font-size: 0.8rem; /* Adjust text size for very small screens */
+    .slide-sub-text {
+        font-size: 1rem;
     }
 }

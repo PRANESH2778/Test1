@@ -6,13 +6,14 @@
   
   .industry-section h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #192335;
+    text-transform: uppercase;
     margin-bottom: 15px;
   }
   
   .industry-section p {
     font-size: 1.2rem;
-    color: #7f8c8d;
+    color: #444444;
     margin-bottom: 40px;
     line-height: 1.6;
   }
@@ -45,12 +46,12 @@
   
   .industry-card h3 {
     font-size: 1.3rem;
-    color: #2c3e50;
+    color: #192335;
     margin-bottom: 10px;
   }
   
   .industry-card p {
     font-size: 1rem;
-    color: #7f8c8d;
+    color: #444444;
     line-height: 1.4;
   }
