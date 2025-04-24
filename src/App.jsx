@@ -2,31 +2,32 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Services from './pages/Services';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Services from './pages/Services/Services';
 import Insights from './pages/Insights';
-import ContactUs from './pages/ContactUs';
+import ContactUs from './pages/ContactUs/ContactUs';
 import Approach from './pages/Approach'
-import Footer from './pages/Footer';
-import Team from './pages/Team';
-import DirectTaxation from './components/DirectTaxation';
-import AccountingBookkeeping from './components/AccountingBookkeeping';
-import AuditAssurance from './components/AuditAssurance';
-import BusinessAdvisory from './components/BusinessAdvisory';
-import ForeignExchangeMatters from './components/ForeignExchangeMatters';
-import GSTIndirectTaxes from './components/GSTIndirectTaxes';
-import InternationalTaxationFEMA from './components/InternationalTaxationFEMA';
-import StartupSMEServices from './components/StartupSMEServices';
-import Layout from './components/Layout';
-import Solutions from './pages/Solutions';
+import Footer from './pages/Footer/Footer';
+import Team from './pages/Team/Team';
+import DirectTaxation from './components/ServicesCategories/DirectTaxation';
+import AccountingBookkeeping from './components/ServicesCategories/AccountingBookkeeping';
+import AuditAssurance from './components/ServicesCategories/AuditAssurance';
+import BusinessAdvisory from './components/ServicesCategories/BusinessAdvisory';
+import ForeignExchangeMatters from './components/ServicesCategories/ForeignExchangeMatters';
+import GSTIndirectTaxes from './components/ServicesCategories/GSTIndirectTaxes';
+import InternationalTaxationFEMA from './components/ServicesCategories/InternationalTaxationFEMA';
+import StartupSMEServices from './components/ServicesCategories/StartupSMEServices';
+import Layout from './components/Layout/Layout';
+import Solutions from './pages/Solutions/Solutions';
 import ScrollToTop from './components/ScrollToTop';
-import Blogs from './pages/Blogs';
-import StartupStrategy from './components/StartupStrategy';
-import CaptiveCenterCreation from './components/CaptiveCenterCreation';
-import FirstGenBusinessAdvisory from './components/FirstGenBusinessAdvisory';
-import NextGenFamilyBusiness from './components/NextGenFamilyBusiness';
+import Blogs from './pages/Blogs/Blogs';
+import DataAnalysisandBusinessInsights from './components/SolutionCategories/DataAnalysisandBusinessInsights';
+import IndirectTaxAdvisoryandLitigationSupport from './components/SolutionCategories/IndirectTaxAdvisoryandLitigationSupport';
+import IndustrySpecificAdvisoryandComplianceSolutions from './components/SolutionCategories/IndustrySpecificAdvisoryandComplianceSolutions';
+import InternalAuditandMISReporting from './components/SolutionCategories/InternalAuditandMISReporting';
+import OutsourcedAccountingandBookkeeping from './components/SolutionCategories/OutsourcedAccountingandBookkeeping';
 
 const App = () => {
   return (
@@ -42,10 +43,11 @@ const App = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/approach" element={<Approach />} />
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="/startupstrategy" element={<StartupStrategy />} />
-          <Route path="/captivecenter" element={<CaptiveCenterCreation />} />
-          <Route path="/firstgen" element={<FirstGenBusinessAdvisory />} />
-          <Route path="/nextgen" element={<NextGenFamilyBusiness />} />
+          <Route path="/DataAnalysisandBusinessInsights" element={<DataAnalysisandBusinessInsights />} />
+          <Route path="/IndirectTaxAdvisoryandLitigationSupport" element={<IndirectTaxAdvisoryandLitigationSupport />} />
+          <Route path="/IndustrySpecificAdvisoryandComplianceSolutions" element={<IndustrySpecificAdvisoryandComplianceSolutions />} />
+          <Route path="/InternalAuditandMISReporting" element={<InternalAuditandMISReporting />} />
+          <Route path="/OutsourcedAccountingandBookkeeping" element={<OutsourcedAccountingandBookkeeping />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/DirectTaxation" element={<DirectTaxation />} />
           <Route path="/AccountingBookkeeping" element={<AccountingBookkeeping />} />

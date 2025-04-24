@@ -1,0 +1,46 @@
+/* AboutSection.css */
+.about-section-home {
+    padding: 60px 20px;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+  }
+  
+  .about-container-home {
+    max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  }
+  
+  .about-section-home h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2b3d;
+  }
+  
+  .about-section-home p {
+    font-size: 1.1rem;
+    color: #4f4f4f;
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .about-section-home h2 {
+      font-size: 1.6rem;
+    }
+  
+    .about-section-home p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section-home h2 {
+      font-size: 1.4rem;
+    }
+  
+    .about-section-home p {
+      font-size: 0.95rem;
+    }
+  }
+  
