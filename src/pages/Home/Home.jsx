@@ -45,48 +45,19 @@ const Home = () => {
   ];
   return (
     <div style={styles.container}>
-      {/* <h1 style={styles.title}>Welcome to Agrawal Bhaiya & Company</h1>
-      <p style={styles.subtitle}>
-        Your trusted partner in accounting, taxation, and financial advisory.
-      </p> */}
-
-      {/* Call-to-Action Section */}
-      {/* <div style={styles.callToAction}>
-        <button style={styles.button}>Get a Free Consultation</button>
-        <button style={styles.buttonSecondary}>Contact Us</button>
-      </div> */}
-
-      <Courosel data={data} autoPlay={true} interval={3000}/>
-      {/* Gallery Section */}
-      {/* <section style={styles.gallerySection}>
-        <h2 style={styles.galleryTitle}>Our Services Gallery</h2>
-        <div style={styles.gallery}>
-          {[gallery1, gallery2, gallery3, gallery4].map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Gallery ${index + 1}`}
-              style={{
-                ...styles.galleryImage,
-                transform: hoveredGalleryImage === index ? "scale(1.02)" : "scale(1)",
-                boxShadow: hoveredGalleryImage === index ? "0px 6px 15px rgba(0, 0, 0, 0.2)" : "0px 4px 10px rgba(0, 0, 0, 0.1)",
-              }}
-              onMouseEnter={() => setHoveredGalleryImage(index)}
-              onMouseLeave={() => setHoveredGalleryImage(null)}
-            />
-          ))}
-        </div>
-      </section> */}
-      <AboutSection/>
-      <GallerySection/>
-      <SolutionsOffer/>
-      <ExperienceSection/>
-      <ServiceProvide/>
-      <IndustrySection/>
-      <TeamDetails/>
-      <WhyChooseUsSection/>
+      <Courosel data={data} autoPlay={true} interval={3000} />
+  
+      <div className="block"><AboutSection /></div>
+      <div className="block"><GallerySection /></div>
+      <div className="block"><SolutionsOffer /></div>
+      <div className="block"><ExperienceSection /></div>
+      <div className="block"><ServiceProvide /></div>
+      <div className="block"><IndustrySection /></div>
+      <div className="block"><TeamDetails /></div>
+      <div className="block"><WhyChooseUsSection /></div>
     </div>
   );
+  
 };
 
 const styles = {

@@ -120,7 +120,9 @@
   .solutionOffer-container {
     padding: 0.75rem;
   }
-
+  .solutionPage-title {
+    font-size: 1.4rem;
+  }
   .solutionOffer-title {
     font-size: 1.25rem;
   }

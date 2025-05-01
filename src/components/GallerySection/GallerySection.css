@@ -99,3 +99,12 @@
   button.next {
     right: 10px;
   }
+
+  @media (max-width: 480px) {
+    .gallery-section h2{
+      font-size: 1.4rem;
+    }
+    .gallery-section p{
+      font-size: 0.95rem;
+    }
+  }

@@ -4,12 +4,19 @@
     text-align: center;
     background-color: #f9f9f9;
   }
+  .team-section-title {
+    margin-top: 40px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+  }
   
   .team-title {
-    font-size: 28px;
-    color: #192335;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    font-size: 2rem;
+  margin-bottom: 20px;
+  color: #192335;
+  text-transform: uppercase;
   }
   
   .team-grid {
@@ -71,6 +78,9 @@
     font-size: 14px;
     text-align: center;
     color: #f9f9f9;
+  }
+  .card-info{
+    margin-top: 1rem;
   }
   .specializations {
     margin-top: 15px;

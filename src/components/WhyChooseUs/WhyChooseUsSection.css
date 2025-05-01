@@ -46,9 +46,18 @@
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 10px;
+    text-transform: uppercase;
   }
   
   .feature-card p {
     font-size: 1rem;
     color: #666;
+  }
+  @media (max-width: 480px) {
+    .why-choose-us h2{
+      font-size: 1.4rem;
+    }
+    .why-choose-us p{
+      font-size: 0.95rem;
+    }
   }

@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useState, useEffect } from "react";
+import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
@@ -28,12 +30,50 @@ import IndirectTaxAdvisoryandLitigationSupport from './components/SolutionCatego
 import IndustrySpecificAdvisoryandComplianceSolutions from './components/SolutionCategories/IndustrySpecificAdvisoryandComplianceSolutions';
 import InternalAuditandMISReporting from './components/SolutionCategories/InternalAuditandMISReporting';
 import OutsourcedAccountingandBookkeeping from './components/SolutionCategories/OutsourcedAccountingandBookkeeping';
+import NavbarMobile from './components/Navbar/navbarMobile';
 
 const App = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  
+  const toggleNavbar = () => setIsCollapsed(!isCollapsed);
+  const closeNavbar = () => {
+    setIsCollapsed(true); // ✅ closes the menu
+    setServicesDropdownOpen(false); // optional: close dropdowns too
+    setSolutionsDropdownOpen(false);
+  };
   return (
     <Router>
       <ScrollToTop/>
-      <Navbar />
+      {isMobile ? (
+        <NavbarMobile
+        isCollapsed={isCollapsed}
+        toggleNavbar={toggleNavbar}
+        closeNavbar={closeNavbar}
+        servicesDropdownOpen={servicesDropdownOpen}
+        setServicesDropdownOpen={setServicesDropdownOpen}
+        solutionsDropdownOpen={solutionsDropdownOpen}
+        setSolutionsDropdownOpen={setSolutionsDropdownOpen}
+      />
+      ) : (
+        <NavbarDesktop
+          servicesDropdownOpen={servicesDropdownOpen}
+          solutionsDropdownOpen={solutionsDropdownOpen}
+          setServicesDropdownOpen={setServicesDropdownOpen}
+          setSolutionsDropdownOpen={setSolutionsDropdownOpen}
+        />
+      )}
       <div >
         <Routes>
           <Route path='/' element={<Layout/>}>

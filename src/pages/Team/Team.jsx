@@ -5,6 +5,7 @@ const Team = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
   const teamMembers = [
+    // ... (same data as before)
     {
       id: 1,
       name: "CA Ajay Agrawal",
@@ -96,10 +97,12 @@ specializations: [
     "Expense & Revenue Analysis",
     "Audit Documentation & Reporting",
     "Excel-based MIS & Reconciliation"
-,
 ]
-    },
-  ];
+    }
+]
+
+  const managingPartners = teamMembers.slice(0, 3);
+  const team = teamMembers.slice(3);
 
   const handleOpenModal = (member) => {
     setSelectedMember(member);
@@ -112,8 +115,34 @@ specializations: [
   return (
     <div className="team-container">
       <h1 className="team-title">Our Team</h1>
+
+      <h2 className="team-section-title">Managing Partners</h2>
       <div className="team-grid">
-        {teamMembers.map((member) => (
+        {managingPartners.map((member) => (
+          <div className="team-card" key={member.id}>
+            <div className="card-image">
+              <img src={member.image} alt={member.name} />
+              <div className="card-overlay">
+                <p>{member.shortDescription}</p>
+                <span
+                  onClick={() => handleOpenModal(member)}
+                  className="read-more"
+                >
+                  Read More
+                </span>
+              </div>
+            </div>
+            <div className="card-info">
+              <h3>{member.name}</h3>
+              <p>{member.title}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="team-section-title">Team Members</h2>
+      <div className="team-grid">
+        {team.map((member) => (
           <div className="team-card" key={member.id}>
             <div className="card-image">
               <img src={member.image} alt={member.name} />
@@ -138,10 +167,7 @@ specializations: [
       {/* Modal */}
       {selectedMember && (
         <div className="modal" onClick={handleCloseModal}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={handleCloseModal}>
               &times;
             </button>

@@ -58,3 +58,11 @@
     color: #444444;
     line-height: 1.4;
   }
+  @media (max-width: 480px) {
+    .industry-section h2{
+      font-size: 1.4rem;
+    }
+    .industry-section p{
+      font-size: 0.95rem;
+    }
+  }

@@ -30,12 +30,28 @@ const Navbar = () => {
     setSolutionsDropdownOpen(false);
   };
 
-  const toggleDropdown = (event, dropdownSetter) => {
+
+  // const toggleDropdown = (event, dropdownSetter) => {
+  //   event.preventDefault();
+  //   if (isMobile) {
+  //     dropdownSetter(prevState => !prevState);
+  //   }
+  // };
+  const toggleDropdown = (event, dropdownSetter, otherDropdownSetter) => {
     event.preventDefault();
     if (isMobile) {
-      dropdownSetter((prevState) => !prevState);
+      dropdownSetter(prevState => {
+        const newState = !prevState;
+        if (newState) {
+          // If opening this dropdown, close the other
+          otherDropdownSetter(false);
+        }
+        return newState;
+      });
     }
   };
+  
+    
 
   return (
     <>
@@ -50,6 +66,9 @@ const Navbar = () => {
               <a href="#"><i className="fab fa-facebook-f"></i></a>
               <a href="#"><i className="fab fa-linkedin-in"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="https://wa.me/919586737879" target="_blank" rel="noopener noreferrer">
+    <i className="fab fa-whatsapp"></i>
+  </a>
             </div>
           </div>
         </div>
@@ -66,72 +85,153 @@ const Navbar = () => {
           </button>
 
           <div className={`collapse navbar-collapse ${isCollapsed ? "" : "show"}`} id="navbarSupportedContent">
-            {isMobile && (
-              <div className="mobile-contact">
-                <p><FaEnvelope /> <a href="mailto:abandco.surat@gmail.com">abandco.surat@gmail.com</a></p>
-                <p><FaPhone /> <a href="tel:+912614531968">0261-4531968</a></p>
-              </div>
-            )}
+          {isMobile && (
+  <div className="mobile-contact">
+    <p><FaEnvelope /> <a href="mailto:abandco.surat@gmail.com">abandco.surat@gmail.com</a></p>
+    <p><FaPhone /> <a href="tel:+912614531968">0261-4531968</a></p>
+    <div className="mobile-social-icons mt-2">
+      <a href="https://wa.me/919586737879" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-whatsapp"></i>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-instagram"></i>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+)}
+
 
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/" onClick={closeNavbar}>Home</Link>
               </li>
+             <li className="nav-item">
+  <div className="d-flex justify-content-between align-items-center nav-link p-0">
+    <Link
+      to="/solutions"
+      className="nav-link flex-grow-1"
+      onClick={closeNavbar}
+      style={{ paddingRight: "0.5rem" }}
+    >
+      Solutions
+    </Link>
+    {isMobile && (
+      <span
+        className="dropdown-arrow pr-2"
+        style={{ cursor: "pointer" }}
+        onClick={(e) => toggleDropdown(e, setSolutionsDropdownOpen, setServicesDropdownOpen)}
 
-              {/* Solutions Dropdown */}
-              <li 
-                className={`nav-item dropdown ${solutionsDropdownOpen ? "show" : ""}`}
-                onMouseEnter={() => !isMobile && setSolutionsDropdownOpen(true)}
-                onMouseLeave={() => !isMobile && setSolutionsDropdownOpen(false)}
-              >
-                <div className="d-flex align-items-center">
-                  <Link className="nav-link" to="/solutions" onClick={() => { if (!isMobile) closeNavbar(); }}>Solutions</Link>
-                  <span 
-                    className={`nav-link dropdown-toggle ${isMobile ? "dropdown-toggle-mobile" : ""}`}
-                    style={{ cursor: "pointer", paddingLeft: "0px" }}
-                    onClick={(e) => toggleDropdown(e, setSolutionsDropdownOpen)}
-                    aria-haspopup="true"
-                    aria-expanded={solutionsDropdownOpen}
-                  ></span>
-                </div>
-                <div className={`dropdown-menu ${solutionsDropdownOpen ? "show" : ""}`} aria-labelledby="navbarDropdown">
-                  <Link className="dropdown-item" to="/DataAnalysisandBusinessInsights" onClick={closeNavbar}>DataAnalysisandBusinessInsights</Link>
-                  <Link className="dropdown-item" to="/IndirectTaxAdvisoryandLitigationSupport" onClick={closeNavbar}>IndirectTaxAdvisoryandLitigationSupport</Link>
-                  <Link className="dropdown-item" to="/IndustrySpecificAdvisoryandComplianceSolutions" onClick={closeNavbar}>IndustrySpecificAdvisoryandComplianceSolutions</Link>
-                  <Link className="dropdown-item" to="/InternalAuditandMISReporting" onClick={closeNavbar}>InternalAuditandMISReporting</Link>
-                  <Link className="dropdown-item" to="/OutsourcedAccountingandBookkeeping" onClick={closeNavbar}>OutsourcedAccountingandBookkeeping</Link>
-                </div>
-              </li>
+      >
+        {solutionsDropdownOpen ? "▼" : "▶"}
+      </span>
+    )}
+  </div>
 
-              {/* Services Dropdown */}
-              <li 
-                className={`nav-item dropdown ${servicesDropdownOpen ? "show" : ""}`}
-                onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
-                onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
-              >
-                <div className="d-flex align-items-center">
-                  <Link className="nav-link" to="/services" onClick={() => { if (!isMobile) closeNavbar(); }}>Services</Link>
-                  <span 
-                    className={`nav-link dropdown-toggle ${isMobile ? "dropdown-toggle-mobile" : ""}`}
-                    style={{ cursor: "pointer", paddingLeft: "0px" }}
-                    onClick={(e) => toggleDropdown(e, setServicesDropdownOpen)}
-                    aria-haspopup="true"
-                    aria-expanded={servicesDropdownOpen}
-                  ></span>
-                </div>
-                <div className={`dropdown-menu ${servicesDropdownOpen ? "show" : ""}`} aria-labelledby="navbarDropdown">
-                  <Link className="dropdown-item" to="/DirectTaxation" onClick={closeNavbar}>Direct Taxation</Link>
-                  <Link className="dropdown-item" to="/AccountingBookkeeping" onClick={closeNavbar}>Accounting & Bookkeeping</Link>
-                  <Link className="dropdown-item" to="/AuditAssurance" onClick={closeNavbar}>Audit & Assurance</Link>
-                  <Link className="dropdown-item" to="/BusinessAdvisory" onClick={closeNavbar}>Business Advisory</Link>
-                  <Link className="dropdown-item" to="/ForeignExchangeMatters" onClick={closeNavbar}>Foreign Exchange Matters</Link>
-                  <Link className="dropdown-item" to="/GSTIndirectTaxes" onClick={closeNavbar}>GST & Indirect Taxes</Link>
-                  <Link className="dropdown-item" to="/InternationalTaxationFEMA" onClick={closeNavbar}>International Taxation & FEMA</Link>
-                  <Link className="dropdown-item" to="/StartupSMEServices" onClick={closeNavbar}>Startup & SME Services</Link>
-                  <div className="dropdown-divider"></div>
-                  {/* <Link className="dropdown-item" to="/something-else" onClick={closeNavbar}>Something else here</Link> */}
-                </div>
-              </li>
+  {isMobile && solutionsDropdownOpen && (
+    <ul className="dropdown-submenu">
+      <li>
+        <Link to="/DataAnalysisandBusinessInsights" className="dropdown-item" onClick={closeNavbar}>
+          Data Analysis
+        </Link>
+      </li>
+      <li>
+        <Link to="/IndirectTaxAdvisoryandLitigationSupport" className="dropdown-item" onClick={closeNavbar}>
+          Indirect Tax
+        </Link>
+      </li>
+      <li>
+        <Link to="/IndustrySpecificAdvisoryandComplianceSolutions" className="dropdown-item" onClick={closeNavbar}>
+          Industry Advisory
+        </Link>
+      </li>
+      <li>
+        <Link to="/InternalAuditandMISReporting" className="dropdown-item" onClick={closeNavbar}>
+          Internal Audit
+        </Link>
+      </li>
+      <li>
+        <Link to="/OutsourcedAccountingandBookkeeping" className="dropdown-item" onClick={closeNavbar}>
+          Bookkeeping
+        </Link>
+      </li>
+    </ul>
+  )}
+</li>
+
+
+
+
+<li 
+  className={`nav-item dropdown position-relative ${servicesDropdownOpen ? "show" : ""}`}
+  onMouseEnter={() => {
+    if (!isMobile) {
+      setServicesDropdownOpen(true);
+      setSolutionsDropdownOpen(false);
+    }
+  }}
+  onMouseLeave={() => {
+    if (!isMobile) {
+      setServicesDropdownOpen(false);
+    }
+  }}
+>
+  <div className="d-flex align-items-center justify-content-between">
+    <Link
+      className="nav-link"
+      to="/services"
+      onClick={() => {
+        if (!isMobile) {
+          closeNavbar();
+        } else {
+          // In mobile: just toggle the dropdown
+          setServicesDropdownOpen((prev) => !prev);
+          setSolutionsDropdownOpen(false);
+        }
+      }}
+    >
+      Services
+    </Link>
+
+    {/* Arrow icon span for mobile toggle */}
+    {isMobile && (
+      <span
+        className={`nav-link dropdown-toggle dropdown-toggle-mobile`}
+        style={{ cursor: "pointer", paddingLeft: "0px" }}
+        onClick={(e) => {
+          e.stopPropagation();
+          setServicesDropdownOpen((prev) => !prev);
+          setSolutionsDropdownOpen(false);
+        }}
+        aria-haspopup="true"
+        aria-expanded={servicesDropdownOpen}
+      ></span>
+    )}
+  </div>
+
+  <div
+    className={`dropdown-menu ${servicesDropdownOpen ? "show" : ""}`}
+    aria-labelledby="navbarDropdown"
+    style={{ top: "100%", left: "0", zIndex: "1000" }}
+  >
+    <Link className="dropdown-item" to="/DirectTaxation" onClick={closeNavbar}>Direct Taxation</Link>
+    <Link className="dropdown-item" to="/AccountingBookkeeping" onClick={closeNavbar}>Accounting & Bookkeeping</Link>
+    <Link className="dropdown-item" to="/AuditAssurance" onClick={closeNavbar}>Audit & Assurance</Link>
+    <Link className="dropdown-item" to="/BusinessAdvisory" onClick={closeNavbar}>Business Advisory</Link>
+    <Link className="dropdown-item" to="/ForeignExchangeMatters" onClick={closeNavbar}>Foreign Exchange Matters</Link>
+    <Link className="dropdown-item" to="/GSTIndirectTaxes" onClick={closeNavbar}>GST & Indirect Taxes</Link>
+    <Link className="dropdown-item" to="/InternationalTaxationFEMA" onClick={closeNavbar}>International Taxation & FEMA</Link>
+    <Link className="dropdown-item" to="/StartupSMEServices" onClick={closeNavbar}>Startup & SME Services</Link>
+  </div>
+</li>
+
+
+
 
               <li className="nav-item">
                 <Link className="nav-link" to="/blogs" onClick={closeNavbar}>Blogs</Link>

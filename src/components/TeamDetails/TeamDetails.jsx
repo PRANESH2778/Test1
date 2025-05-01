@@ -41,26 +41,7 @@ const TeamDetails = () => {
           email: "uttam@example.com",
           phone: "+91-9876543220",
         },
-        {
-          name: "CA Shashank Gangil (Associate)",
-          title: "B.com, ACA",
-          description:
-            "Uttam Patel specializes in international tax, company law matters, IFRS, and related work...",
-          image: "https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29ufGVufDB8fDB8fHww", // Replace with your API response
-          linkedin: "https://linkedin.com/in/uttampatel",
-          email: "uttam@example.com",
-          phone: "+91-9876543220",
-        },
-        {
-          name: "CA Niraj Bhaiya (Partner)",
-          title: "B.com, ACA, DISA, Cer. Conc. Auditor",
-          description:
-            "Uttam Patel specializes in international tax, company law matters, IFRS, and related work...",
-          image: "https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29ufGVufDB8fDB8fHww", // Replace with your API response
-          linkedin: "https://linkedin.com/in/uttampatel",
-          email: "uttam@example.com",
-          phone: "+91-9876543220",
-        },
+        
       ];
       setTeamMembers(data);
     };
