@@ -30,7 +30,7 @@ import IndirectTaxAdvisoryandLitigationSupport from './components/SolutionCatego
 import IndustrySpecificAdvisoryandComplianceSolutions from './components/SolutionCategories/IndustrySpecificAdvisoryandComplianceSolutions';
 import InternalAuditandMISReporting from './components/SolutionCategories/InternalAuditandMISReporting';
 import OutsourcedAccountingandBookkeeping from './components/SolutionCategories/OutsourcedAccountingandBookkeeping';
-import NavbarMobile from './components/Navbar/navbarMobile';
+import NavbarMobile from './components/Navbar/NavbarMobile';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
